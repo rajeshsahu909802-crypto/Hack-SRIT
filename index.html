@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus News | AI Summarizer</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    
+    <div class="app-container">
+        <header class="app-header">
+            <h1 class="brand-title">Nexus<span class="gradient-text">News</span></h1>
+            <p class="brand-subtitle">Powered by Google Gemini AI ✨</p>
+        </header>
+
+        <section class="controls-section">
+            <div class="control-group">
+                <label for="source-select">News Source</label>
+                <div class="select-wrapper">
+                    <select id="source-select">
+                        <option value="BBC">BBC News</option>
+                        <option value="TechCrunch">TechCrunch</option>
+                        <option value="CNN">CNN</option>
+                        <option value="NYT">New York Times</option>
+                        <option value="HackerNews">Hacker News</option>
+                        <option value="TheVerge">The Verge</option>
+                        <option value="AlJazeera">Al Jazeera</option>
+                        <option value="ESPN">ESPN Sports</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label for="tone-select">Summary Tone</label>
+                <div class="select-wrapper">
+                    <select id="tone-select">
+                        <option value="professional">Professional</option>
+                        <option value="eli5">Explain Like I'm 5</option>
+                        <option value="bullet">Bullet Points</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="fetch-btn" class="primary-btn">
+                <span>Refresh News</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2v6h-6"></path><path d="M3 12a9 9 0 1 0 2.81-6.61L21 8"></path></svg>
+            </button>
+        </section>
+
+        <div id="loader" class="loader-container hidden">
+            <div class="radar-spinner"></div>
+            <p>Scanning the globe for updates...</p>
+        </div>
+
+        <main id="news-grid" class="news-grid">
+            <!-- News cards dynamically injected here -->
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
